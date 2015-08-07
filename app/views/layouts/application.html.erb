@@ -19,7 +19,7 @@
     |
     <%= link_to 'logout', destroy_user_session_path, method: 'delete' %>
     <% else %>
-    <%= link_to 'login', new_user_session_path %> #post is default method
+    <%= link_to 'login', new_user_session_path %> <!-- #get is default method-->
   <% end %>
 </div>
 
