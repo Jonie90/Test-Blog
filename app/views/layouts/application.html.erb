@@ -8,6 +8,21 @@
 </head>
 <body>
 
+<div class="container">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+</div>
+
+<div class="container">
+  <% if user_signed_in? %>
+    <%= current_user.name %>
+    |
+    <%= link_to 'logout', destroy_user_session_path, method: 'delete' %>
+    <% else %>
+    <%= link_to 'login', new_user_session_path %> #post is default method
+  <% end %>
+</div>
+
 <%= yield %>
 
 </body>
